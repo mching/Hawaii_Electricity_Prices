@@ -17,13 +17,21 @@ shinyUI(fluidPage(
   # Sidebar with a slider input for number of bins
   sidebarLayout(
     sidebarPanel(
-      dateRangeInput("date_input", "Dates to find prices", start = set_start_date,
+        h3("Instructions:"),
+        
+        p("This simple application allows you to find information on median electricity prices in the state of Hawai'i. You select a range of dates, the sector using the electricity, and the island. 
+           The application returns the median value for the given inputs."),
+        
+      
+        dateRangeInput("date_input", "Dates to find prices", start = set_start_date,
                      end = set_end_date, min = set_start_date, 
                      max = set_end_date),
-      radioButtons("sector_input", label = h3("Sector"),
+      
+        radioButtons("sector_input", label = h3("Sector"),
                    choices = list("Commercial" = 2, "Residential" = 3, "Street Lights" = 4), 
                    selected = 2),
-      radioButtons("island_input", label = h3("Island"),
+      
+        radioButtons("island_input", label = h3("Island"),
                    choices = list("Hawaii" = 1, 
                                   "Kauai" = 2,
                                   "Lanai" = 3,
@@ -36,7 +44,7 @@ shinyUI(fluidPage(
 
     mainPanel(
       h3("Median Electricity Price"),
-      h4("The median electricity price (cents/kwh) for the dates and island selected is: "),
+      p("The median electricity price (cents/kwh) for the dates and island selected is: "),
       verbatimTextOutput("summary")
     )
   )
