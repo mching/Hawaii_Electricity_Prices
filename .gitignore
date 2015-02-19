@@ -4,3 +4,6 @@
 *.Rproj
 *.R
 *.RData
+README_cache/
+README.html
+shinyapps/
