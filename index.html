@@ -1,44 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset='utf-8'>
-	<title>Hawaii Electricity Prices</title>
-	<meta name="description" content="Hawaii Electricity Prices">
-	<meta name="author" content="Michael Ching">
-	<meta name="generator" content="slidify" />
-	
-	<!-- LOAD STYLE SHEETS -->
-	<link rel="stylesheet" href="libraries/frameworks/html5slides/default/styles.css">
-	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />    
+  <title>Hawaii Electricity Prices</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Hawaii Electricity Prices">
+  <meta name="author" content="Michael Ching">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
 </head>
-<body style='display: none'>
-	<section class='slides layout-regular template-regular'>
-     <article class="" id="slide-1" style="background:;">
-  <h3>Electricity Prices in Hawaii</h3>
-  <ol>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Hawaii Electricity Prices</h1>
+    <h2>2008-2012</h2>
+    <p>Michael Ching<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Electricity Prices in Hawaii</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
 <li>Prices for electricity in Hawaii are among the highest in the United States</li>
 <li>These prices vary not only by time but by island and sector</li>
 <li>Sectors include Residential, Commercial, and Street Light uses</li>
-<li>The following figure shows the data plotted with <code>ggplot2</code> (Source: <a href="https://data.hawaii.gov/Government-Wide-Support/HI-Electricity-Prices/74g9-vewt">Hawaii Open Data</a>)</li>
+<li>The following figure shows prices from 2008 to 2012 plotted with <code>ggplot2</code> (Source: <a href="https://data.hawaii.gov/Government-Wide-Support/HI-Electricity-Prices/74g9-vewt">Hawaii Open Data</a>)</li>
 </ol>
 
-</article>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-<article class="class" id="id" style="background:;">
-  <h3>Price Change by Island and Sector over Time</h3>
-  <p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Price Change by Island and Sector over Time</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
 
-</article>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-<article class="" id="slide-3" style="background:;">
-  <h3>Exploring Price Variation</h3>
-  <p>I created a <a href="https://mching.shinyapps.io/HI_electricity_prices/">Shiny app</a> to provide medians for the price by time, island and sector</p>
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Exploring Price Variation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>I created a <a href="https://mching.shinyapps.io/HI_electricity_prices/">Shiny app</a> to provide medians for the price by time, island and sector</p>
 
-</article>
-
-<article class="" id="slide-4" style="background:;">
-  <h3>Sample Calculation</h3>
-  <ol>
+<ol>
 <li>This is an example of how the app works. </li>
 <li>We can give it dates such as 2010-01-01 through 2010-12-01 and ask for the island of Oahu and sector of Residential rates. </li>
 <li>The app returns the following value in cents per kilowatt-hour. </li>
@@ -48,20 +84,62 @@
 ## 1 25.79
 </code></pre>
 
-</article>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-<article class="" id="slide-5" style="background:;">
-  <h3></h3>
-  
-</article>
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Conclusion</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This application makes it easy to extract median electricity prices for a given island, sector and dates.</p>
 
-  </section>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Electricity Prices in Hawaii'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Price Change by Island and Sector over Time'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Exploring Price Variation'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Conclusion'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
 </body>
-  <!-- LOAD JAVASCRIPTS  -->
-	<script src='libraries/frameworks/html5slides/default/slides.js'></script>
-	<!-- LOAD HIGHLIGHTER JS FILES -->
-	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
-	 
-	</html>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
